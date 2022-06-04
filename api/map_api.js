@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const Map = require('../entities/map');
-const User = require("../entities/user");
 
 router.get('/maps', (req, res) => {
     Map.findAll()
@@ -46,7 +45,7 @@ router.post('/map/create', async (req, res) => {
         });
 });
 
-router.delete('/map/delete-all', (req, res) => {
+router.delete('/maps/delete-all', (req, res) => {
 
     return Map.destroy({
         where: {},
