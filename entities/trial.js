@@ -9,7 +9,6 @@ const Trial = db.define('Trial', {
     },
     numOfTrials: {
         type: DataTypes.INTEGER,
-        primaryKey: true,
         defaultValue: 5
     },
 }, {

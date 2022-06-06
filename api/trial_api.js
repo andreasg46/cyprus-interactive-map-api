@@ -55,7 +55,6 @@ router.put('/trial/update/:id', (req, res) => {
                 .setHeader('content-type', 'application/json')
                 .send({error: `ID is non-numeric!`});
         }
-
         const trial = await Trial.findOne({where: {id: id}})
 
         if (!trial) {
@@ -68,7 +67,7 @@ router.put('/trial/update/:id', (req, res) => {
             trial.numOfTrials = posted_trial.numOfTrials;
 
         return trial.save({transaction: t})
-            .then(user => {
+            .then(trial => {
                 res.status(200)
                     .setHeader('content-type', 'application/json')
                     .send({message: `Trial updated!`, trial: trial});
