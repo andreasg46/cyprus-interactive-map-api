@@ -7,6 +7,7 @@ const db = require('./db/configDB');
 
 const user_api = require('./api/user_api');
 const map_api = require('./api/map_api');
+const trial_api = require('./api/trial_api')
 
 const date = new Date();
 const server = express();
@@ -35,6 +36,7 @@ server.get("/", (req, res) => {
 // API Calls
 server.use('/', user_api);
 server.use('/', map_api);
+server.use('/', trial_api);
 
 server.use(cors);
 

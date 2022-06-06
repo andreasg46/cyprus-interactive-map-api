@@ -33,7 +33,7 @@ router.post('/user/create', async (req, res) => {
         .then(user => {
             return res.status(200)
                 .setHeader('content-type', 'application/json')
-                .send({message: `user added!`, user: user});
+                .send({message: `User added!`, user: user});
         })
         .catch(error => {
             return res.status(500)

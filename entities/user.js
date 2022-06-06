@@ -6,6 +6,11 @@ const User = db.define('User', {
         type: DataTypes.INTEGER,
         primaryKey: true,
     },
+    created_at: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        defaultValue: DataTypes.NOW,
+    },
     age: {
         type: DataTypes.STRING,
     },

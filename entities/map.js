@@ -11,6 +11,11 @@ const Map = db.define('Map', {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
+    created_at: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        defaultValue: DataTypes.NOW,
+    },
     trial: {
         type: DataTypes.STRING,
     },
