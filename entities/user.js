@@ -12,7 +12,7 @@ const User = db.define('User', {
         defaultValue: DataTypes.NOW,
     },
     age: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
     },
     location: {
         type: DataTypes.STRING,

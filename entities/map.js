@@ -17,7 +17,7 @@ const Map = db.define('Map', {
         defaultValue: DataTypes.NOW,
     },
     trial: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
     },
     village: {
         type: DataTypes.STRING,
@@ -28,31 +28,31 @@ const Map = db.define('Map', {
         allowNull: true,
     },
     co_x: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
     co_y: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
     co_x_click: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
     co_y_click: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    co_error: {
-        type: DataTypes.STRING,
+    co_error_km: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    co_error_x: {
-        type: DataTypes.STRING,
+    co_error_x_km: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    co_error_y: {
-        type: DataTypes.STRING,
+    co_error_y_km: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     }
 }, {
